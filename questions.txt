@@ -1,0 +1,30 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is an absurdly long word for a lung 
+    disease caused by inhaling very fine ash. 
+    
+1.  Returns the resource usage measures for self, children or thread.
+
+2.  16
+
+3.  The getrusage function expects a pointer. 
+
+4.  Main begins reading from the file with a for-loop that iterates over each character using fgetc and checking for the EOF.
+    Then it makes sure that the character is either a letter or an apostraphe. It then appends the letter to a character array called word.
+    It then checks to see if the length of word is greater than the maximum word length. If that's the case it's not a word, it consumes the rest 
+    and resets the index. Then it checks to make sure the character is not a number. If it is it consumes it, resets the index and moves on. 
+    If the index isn't reset in either of the previous cases then it knows it's found a word. It adds \0 to denote the end of a string and
+    increments the word count. Then it checks the word's spelling and if its mispelled it increments misspellings. Then it sets the index
+    back to zero and continues looping till EOF. 
+
+5.  fscanf ignores whitespace making it a less than ideal tool for this particular problem where we can use the white space to denote the end of a word. 
+
+6.  Because you're only reading the elements, not changing them so it would make sense to make them constants.
+
+7.  I'm using a trie method. Each node in the trie consists of a boolean value for whether something is a word
+    and an array of pointers to 27 nodes called children. 
+    
+8.  It ran in .18 first time I ran it which was comparable to some of the fastest times on the leaderboard.
+
+9.  I made no changes once I got it working properly.
+
+10. I feel like I see a lot of other people with faster unload times, so I must have an issue there. Although I have 
+    no idea how, since my unload is a really simple recursive function. 
